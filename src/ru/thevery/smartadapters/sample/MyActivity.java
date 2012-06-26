@@ -22,9 +22,12 @@ public class MyActivity extends Activity {
         }
 
         ListView listView = new ListView(this);
-        TwoLineItemAdapter adapter = new TwoLineItemAdapter(this, R.layout.two_line_list_item,
-                TwoLineItemAdapter.TwoLineItemHolder.class, sampleData);
-        listView.setAdapter(adapter);
+//        TwoLineItemAdapter adapter = new TwoLineItemAdapter(this, R.layout.two_line_list_item,
+//                TwoLineItemAdapter.TwoLineItemHolder.class, sampleData);
+//        listView.setAdapter(adapter);
+        TwoLineItemAdapter2 adapter2 = new TwoLineItemAdapter2(this, R.layout.two_line_list_item,
+                TwoLineItemAdapter2.TwoLineItemHolder.class, sampleData);
+        listView.setAdapter(adapter2);
         setContentView(listView);
     }
 }
