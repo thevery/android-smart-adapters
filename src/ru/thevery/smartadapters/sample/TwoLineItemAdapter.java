@@ -1,7 +1,6 @@
 package ru.thevery.smartadapters.sample;
 
 import android.content.Context;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import ru.thevery.smartadapters.R;
 import ru.thevery.smartadapters.adapters.SmartArrayAdapter;
@@ -15,7 +14,7 @@ public class TwoLineItemAdapter extends SmartArrayAdapter<TwoLineItemAdapter.Two
     }
 
     @Override
-    protected TwoLineItemHolder createNewViewHolder(int position, ViewGroup parent) {
+    protected TwoLineItemHolder createNewViewHolder(int position) {
         return new TwoLineItemHolder();
     }
 

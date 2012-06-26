@@ -31,7 +31,7 @@ public abstract class SmartBaseAdapter<THolder> extends BaseAdapter {
         init(holderType);
     }
 
-    protected abstract THolder createNewViewHolder(int position, ViewGroup parent);
+    protected abstract THolder createNewViewHolder(int position);
 
     protected abstract void bindView(int position, THolder holder);
 
@@ -45,7 +45,7 @@ public abstract class SmartBaseAdapter<THolder> extends BaseAdapter {
         THolder holder;
         if (convertView == null) {
             convertView = createNewView(position, parent);
-            holder = createNewViewHolder(position, parent);
+            holder = createNewViewHolder(position);
             convertView.setTag(holder);
             injectViews(holder, convertView);
         } else {
